@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Weather365</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_dummy_temperature">°C</string>
+    <string name="text_dummy_city_name">City Name</string>
+    <string name="text_dummy_time">02:25 PM</string>
+    <string name="text_default_font_family">sans-serif-light</string>
+    <string name="text_default_weather_condition">-</string>
+    <string name="text_default_weather_icon">Default Weather Icon</string>
+    <string name="int_blur_radius">12</string>
+
+    <string name="text_default_weather_status">sans-serif-light</string>
+    <string name="text_content_description_for_city_icon">The Image Of The City Goes Here...</string>
+    <string name="text_error_longer_task">Loading is taking longer than usual.</string>
+    <string name="text_trying_again">Trying again...</string>
+    <string name="text_forecast">\u0020 Forecast</string>
+    <string name="text_error_accessing_illegal_resources">Accessing Res.ource while the fragment has been destroyed</string>
+    <string name="symbol_collon">:</string>
+
+
+</resources>

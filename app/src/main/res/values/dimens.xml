@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_logo_width">100dp</dimen>
+    <dimen name="splash_logo_height">100dp</dimen>
+
+    <dimen name="round_image_border_width">5dp</dimen>
+    <dimen name="activity_transition_animation_duration">2000</dimen>
+    <dimen name="icon_city_height">250dp</dimen>
+    <dimen name="int_blur_radius">12</dimen>
+
+
+</resources>

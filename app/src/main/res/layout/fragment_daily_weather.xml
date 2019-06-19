@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svWeatherDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_sky"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DailyWeatherFragment">
+
+
+        <!--com.jgabrielfreitas.core.BlurImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/ivCityIcon"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:contentDescription="@string/text_content_description_for_city_icon"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:scaleType="fitXY"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:src="@drawable/icon_lahore"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:tint="@color/colorDarkShade"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+
+        <TextView
+            android:id="@+id/tvCityName"
+            style="@style/textFontProperties"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="end"
+            android:text="@string/text_dummy_city_name"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            style="@style/textFontProperties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="17dp"
+            android:text="@string/text_dummy_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCityName" />
+
+        <ImageView
+            android:id="@+id/ivDefaultWeather"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="11dp"
+            android:contentDescription="@string/text_default_weather_icon"
+            android:src="@drawable/icon_default_weather"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentTime" />
+
+        <TextView
+            android:id="@+id/tvDefaultWeatherStatus"
+            style="@style/textFontProperties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/text_default_weather_condition"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivDefaultWeather"
+            app:layout_constraintTop_toTopOf="@+id/ivDefaultWeather" />
+
+        <ImageView
+            android:id="@+id/ivMaxTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_arrow_up"
+            app:layout_constraintStart_toStartOf="@+id/ivDefaultWeather"
+            app:layout_constraintTop_toBottomOf="@+id/ivDefaultWeather" />
+
+        <ImageView
+            android:id="@+id/ivMinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:src="@drawable/icon_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/ivMaxTemp"
+            app:layout_constraintStart_toEndOf="@+id/tvMaxTemp" />
+
+        <TextView
+            android:id="@+id/tvMaxTemp"
+            style="@style/textFontProperties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_dummy_temperature"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivMaxTemp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDefaultWeatherStatus" />
+
+        <TextView
+            android:id="@+id/tvMinTemp"
+            style="@style/textFontProperties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/text_dummy_temperature"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivMinTemp"
+            app:layout_constraintTop_toTopOf="@+id/tvMaxTemp" />
+
+        <TextView
+            android:id="@+id/tvAvgTemp"
+            style="@style/textFontProperties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/text_dummy_temperature"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMinTemp" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvCityName"
+            app:layout_constraintTop_toTopOf="@+id/tvCityName" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPerThreeHours"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAvgTemp" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textFontProperties"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDarkShade"
+            android:text="@string/text_forecast"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvPerThreeHours" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPerDay"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
